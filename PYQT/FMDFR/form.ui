@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Widget</class>
+ <widget class="QWidget" name="Widget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1070</width>
+    <height>623</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Widget</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+background-color: qlineargradient(spread:pad, x1:0.52961, y1:0, x2:0.54, y2:0.955, stop:0 rgb(75, 84, 255), stop:1 rgba(255, 255, 255, 255));
+background-color: qlineargradient(spread:pad, x1:0.52961, y1:0, x2:0.54, y2:0.955, stop:0 rgba(255, 70, 204, 255), stop:1 rgba(255, 255, 255, 255));
+
+background-color: qlineargradient(spread:pad, x1:0.522727, y1:0, x2:0.517, y2:1, stop:0.159091 rgba(98, 93, 255, 255), stop:1 rgba(255, 255, 255, 255));</string>
+  </property>
+  <widget class="QPushButton" name="FMD">
+   <property name="geometry">
+    <rect>
+     <x>470</x>
+     <y>370</y>
+     <width>311</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-radius: 20px;
+color: rgb(0, 0, 0);
+font: 16pt &quot;Times New Roman&quot;;
+background-color: qlineargradient(spread:pad, x1:0.07, y1:0.103, x2:0.793, y2:0.761364, stop:0 rgba(0, 255, 255, 255), stop:1 rgba(255, 255, 255, 255))</string>
+   </property>
+   <property name="text">
+    <string>Face Mask Detector</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="FR">
+   <property name="geometry">
+    <rect>
+     <x>470</x>
+     <y>230</y>
+     <width>311</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-radius: 20px;
+color: rgb(0, 0, 0);
+font: 16pt &quot;Times New Roman&quot;;
+background-color: qlineargradient(spread:pad, x1:0.07, y1:0.103, x2:0.793, y2:0.761364, stop:0 rgba(0, 255, 255, 255), stop:1 rgba(255, 255, 255, 255))</string>
+   </property>
+   <property name="text">
+    <string>Face Recogition</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="TITLE">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>20</y>
+     <width>931</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 36pt &quot;Algerian&quot;;
+background-color: rgba(73, 113, 206, 0);
+color:rgba(0,0,0,1)
+
+</string>
+   </property>
+   <property name="text">
+    <string>CHAKSHU: a way of perceiving</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>530</x>
+     <y>450</y>
+     <width>191</width>
+     <height>151</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgba(73, 113, 206, 0);
+</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>K:\PROJECT\PYQT\FMDFR\LOGO.png</pixmap>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
