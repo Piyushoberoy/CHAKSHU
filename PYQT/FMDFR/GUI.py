@@ -5,16 +5,12 @@ from PyQt5.QtGui import QIcon, QImage, QPixmap, QCloseEvent
 from PyQt5 import QtWidgets, QtCore
 from PyQt5.QtWidgets import QDialog, QApplication, QStackedWidget, QWidget
 from PySide2.QtCore import QFile
-
-#Face Recognition
 from importlib.resources import path
 from pydoc import classname
 import cv2
 import face_recognition
 import os
 import numpy as np
-
-#Face Mask Detection
 from tensorflow.keras.applications.mobilenet_v2 import preprocess_input
 from tensorflow.keras.preprocessing.image import img_to_array
 from tensorflow.keras.models import load_model
@@ -35,8 +31,6 @@ def findEncoding(images):
     for img in images:
         img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
         encode = face_recognition.face_encodings(img)[0]
-        # facescurframe = face_recognition.face_locations(img)
-        # fl = face_recognition.face_landmarks(img, facescurframe)
         encodelist.append(encode)
     return encodelist
 
@@ -46,10 +40,8 @@ prototxtPath = "K:/PROJECT/FaceMaskDetection-main/face_detector/deploy.prototxt"
 weightsPath = "K:/PROJECT/FaceMaskDetection-main/face_detector/res10_300x300_ssd_iter_140000.caffemodel"
 faceNet = cv2.dnn.readNet(prototxtPath, weightsPath)
 
-# load the face mask detector model from disk
 maskNet = load_model("K:\PROJECT\PYQT\FMDFR\mask_detector.model")
 
-print("Lets go")
 class MainScreen(QDialog):
     def __init__(self):
         super(MainScreen, self).__init__()
@@ -80,7 +72,6 @@ class Face_Recognization(QDialog):
         app.aboutToQuit.connect(self.close_all)
 
     def close_all(self):
-        print("done")
         self.cap.release()
         cv2.destroyAllWindows()
 
@@ -97,10 +88,8 @@ class Face_Recognization(QDialog):
                 cv2.waitKey(1)
                 imgs = cv2.resize(img, (0, 0), None, 0.25, 0.25)
                 imgs = cv2.cvtColor(imgs, cv2.COLOR_BGR2RGB)
-                # self.NAME.setText(default)
                 facescurframe = face_recognition.face_locations(imgs)
                 fl = face_recognition.face_landmarks(imgs, facescurframe, model="medium")
-                # print(fl)
                 encodecurframe = face_recognition.face_encodings(imgs, facescurframe)
                 app.aboutToQuit.connect(self.close_all)
                 for encodeface, faceloc in zip(encodecurframe, facescurframe):
@@ -202,7 +191,6 @@ class Face_Mask_Detection(QDialog):
                     color = (0, 255, 0) if label == "Mask" else (0, 0, 255)
 
                     label = "{}".format(label)
-                    print(label)
 
                     self.REMARK.setText(label)
     
@@ -231,9 +219,3 @@ if __name__ == '__main__':
     widget.setFixedWidth(1200)
     widget.show()
     app.exec()
-    # try:
-    #     sys.exit(app.exec_())
-    # except:
-    #     # q.cap.release()
-    #     # cv2.destroAllWindows()
-    #     print("Exiting")
