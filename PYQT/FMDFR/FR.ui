@@ -39,7 +39,7 @@ font: 16pt &quot;Times New Roman&quot;;
 background-color: qlineargradient(spread:pad, x1:0.07, y1:0.103, x2:0.793, y2:0.761364, stop:0 rgba(0, 255, 255, 255), stop:1 rgba(255, 255, 255, 255))</string>
    </property>
    <property name="text">
-    <string>Face Recogition</string>
+    <string>Face Recognition</string>
    </property>
   </widget>
   <widget class="QLabel" name="label">
