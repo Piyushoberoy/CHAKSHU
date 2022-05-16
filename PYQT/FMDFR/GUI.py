@@ -80,6 +80,7 @@ class Face_Recognization(QDialog):
         M=MainScreen()
         widget.addWidget(M)
         widget.setCurrentIndex(widget.currentIndex()+1)
+
     def cap_img(self):
         while (self.cap.isOpened()):
             success, img = self.cap.read()
@@ -101,7 +102,7 @@ class Face_Recognization(QDialog):
                     if matches[matchindex]:
                         name = classname[matchindex].upper()
                         self.NAME.setText(name)
-    
+
     def display(self, img, window=1):
         qformat=QImage.Format_Indexed8
 
@@ -114,7 +115,6 @@ class Face_Recognization(QDialog):
         img = img.rgbSwapped()
         self.rec_img.setPixmap(QPixmap.fromImage(img))
         self.rec_img.setAlignment(QtCore.Qt.AlignHCenter | QtCore.Qt.AlignVCenter)
-
 
 class Face_Mask_Detection(QDialog):
     def __init__(self):
@@ -193,7 +193,7 @@ class Face_Mask_Detection(QDialog):
                     label = "{}".format(label)
 
                     self.REMARK.setText(label)
-    
+
     def display(self, img, window=1):
         qformat=QImage.Format_Indexed8
 
