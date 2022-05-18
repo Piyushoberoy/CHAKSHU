@@ -1,0 +1,14 @@
+cmake
+dlib
+PyQt5
+face_recognition
+opencv-python
+tensorflow==3.8.0
+mediapipe
+matplotlib
+imutils
+sklearn
+numpy
+scipy
+keras
+pyside2
